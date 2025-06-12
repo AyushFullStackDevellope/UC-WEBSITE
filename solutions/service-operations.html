@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UtilizeCore - Streamline Your Field Operations</title>
+    <link rel="stylesheet" href="../index.css" />
+    <link rel="stylesheet" href="../styles/service-operations.css" />
+
+    <!-- Bootstrap 5 CSS & Font Awesome CDN for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://www.utilizecore.com/wp-content/uploads/2024/05/cropped-Favicon-32x32.png"
+        sizes="32x32" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/UtilizeCore-Logo-Blue.svg"
+                    alt="UtilizeCore" />
+            </div>
+
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#solutions">Solutions</a></li>
+                <li class="dropdown">
+                    <a href="#help">Who we help</a>
+                    <div class="dropdown-content">
+                        <a href="#">C-Suite Leaders</a>
+                        <a href="#">Accounts Receivable</a>
+                        <a href="#">Accounts Payable</a>
+                        <a href="#">Operation Teams</a>
+                        <a href="#">Compliance Teams</a>
+                        <a href="#">Snow & Ice Management</a>
+                    </div>
+                </li>
+
+                <li><a href="#pricing">Pricing</a></li>
+                <li class="dropdown">
+                    <a href="#resources">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#">Blog</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Videos</a>
+                        <a href="#">FAQs</a>
+                    </div>
+                </li>
+
+                <li><a href="#contact" class="cta-button">Talk to us</a></li>
+                <li>
+                    <a href="https://reactwork.utilizecore.com/login" class="login-btn">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ===== HEADER SECTION END===== -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>One centralized hub to optimize service delivery.</h1>
+                <p>Operations is the backbone of service delivery. Effortlessly manage everything from receiving work to
+                    processing work orders and delivering quality services, every time.</p>
+            </div>
+
+            <div class="form-container">
+                <h2>Interested to find out more?</h2>
+                <p>See how simple it is to adopt UtilizeCore for your team.</p>
+
+                <form id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="company">Company name</label>
+                            <input type="text" id="company" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Do you use subcontractors?</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="yes" name="subcontractors" value="yes">
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="no" name="subcontractors" value="no">
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recaptcha">
+                        <div class="recaptcha-box">
+                            <i class="fas fa-shield-alt"></i> Protected by reCAPTCHA<br>
+                            <small>Privacy - Terms</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <h2>Trusted by Industry Leaders</h2>
+        <div class="logos-grid">
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Cenova-Logo.png" alt="Cenova">
+            </div>
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Rael-Logo.png" alt="Rael Fire Protection">
+            </div>
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/US-Snow-Pros.png" alt="U.S. Snow Pros">
+            </div>
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Eastend_Group.png" alt="Eastend Group">
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= HERO SECTION END ============= -->
+    <script>
+        // Add entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe logo cards for staggered animation
+        document.querySelectorAll('.logo-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+    </script>
+    <script src="../index.js"></script>
+</body>
+
+</html>

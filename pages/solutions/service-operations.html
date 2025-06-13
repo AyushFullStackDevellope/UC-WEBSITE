@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UtilizeCore - Streamline Your Field Operations</title>
+    <link rel="stylesheet" href="../../index.css" />
+    <link rel="stylesheet" href="../../styles/service-operations.css" />
+
+    <!-- Bootstrap 5 CSS & Font Awesome CDN for icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="icon" href="https://www.utilizecore.com/wp-content/uploads/2024/05/cropped-Favicon-32x32.png"
+        sizes="32x32" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- AOS Library CDN for Scroll Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
+    <header id="header">
+        <nav>
+            <div class="logo">
+                <a href="../../index.html">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/UtilizeCore-Logo-Blue.svg"
+                    alt="UtilizeCore" /></a>
+            </div>
+
+            <div class="mobile-menu-toggle" id="mobileToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="../index.html#solutions">Solutions</a></li>
+                <li class="dropdown">
+                    <a href="#help">Who we help</a>
+                    <div class="dropdown-content">
+                        <a href="#">C-Suite Leaders</a>
+                        <a href="#">Accounts Receivable</a>
+                        <a href="#">Accounts Payable</a>
+                        <a href="#">Operation Teams</a>
+                        <a href="#">Compliance Teams</a>
+                        <a href="#">Snow & Ice Management</a>
+                    </div>
+                </li>
+
+                <li><a href="#pricing">Pricing</a></li>
+                <li class="dropdown">
+                    <a href="#resources">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#">Blog</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Videos</a>
+                        <a href="#">FAQs</a>
+                    </div>
+                </li>
+
+                <li><a href="#contact" class="cta-button">Talk to us</a></li>
+                <li>
+                    <a href="https://reactwork.utilizecore.com/login" class="login-btn">Login</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <!-- ===== MOBILE SIDEBAR ===== -->
+    <div class="mobile-sidebar" id="mobileSidebar">
+        <ul class="mobile-nav-links">
+            <li><a href="../index.html#solutions">Solutions</a></li>
+
+            <li>
+                <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(this)">Who we help</a>
+                <div class="mobile-dropdown-content">
+                    <a href="#">C-Suite Leaders</a>
+                    <a href="#">Accounts Receivable</a>
+                    <a href="#">Accounts Payable</a>
+                    <a href="#">Operation Teams</a>
+                    <a href="#">Compliance Teams</a>
+                    <a href="#">Snow & Ice Management</a>
+                </div>
+            </li>
+
+            <li><a href="#pricing">Pricing</a></li>
+
+            <li>
+                <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(this)">Resources</a>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Blog</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Videos</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </li>
+
+            <li><a href="#contact" class="mobile-cta-button">Talk to us</a></li>
+            <li><a href="#login" class="mobile-login-btn">Login</a></li>
+        </ul>
+    </div>
+
+    <!-- ===== OVERLAY ===== -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- ===== HEADER SECTION END===== -->
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>One centralized hub to optimize service delivery.</h1>
+                <p>
+                    Operations is the backbone of service delivery. Effortlessly manage
+                    everything from receiving work to processing work orders and
+                    delivering quality services, every time.
+                </p>
+            </div>
+
+            <div class="form-container">
+                <h2>Interested to find out more?</h2>
+                <p>See how simple it is to adopt UtilizeCore for your team.</p>
+
+                <form id="contactForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" required />
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="company">Company name</label>
+                            <input type="text" id="company" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Do you use subcontractors?</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="yes" name="subcontractors" value="yes" />
+                                <label for="yes">Yes</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="no" name="subcontractors" value="no" />
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recaptcha">
+                        <div class="recaptcha-box">
+                            <i class="fas fa-shield-alt"></i> Protected by reCAPTCHA<br />
+                            <small>Privacy - Terms</small>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Section -->
+    <section class="trust-section">
+        <h2>Trusted by Industry Leaders</h2>
+        <div class="logos-grid">
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Cenova-Logo.png" alt="Cenova" />
+            </div>
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Rael-Logo.png"
+                    alt="Rael Fire Protection" />
+            </div>
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/US-Snow-Pros.png"
+                    alt="U.S. Snow Pros" />
+            </div>
+            <div class="logo-card animate-on-scroll">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Eastend_Group.png"
+                    alt="Eastend Group" />
+            </div>
+        </div>
+    </section>
+
+    <!-- ============= HERO SECTION END ============= -->
+    <!-- --------------- OPERATION SECTION START -------------- -->
+    <!-- ==== Streamlined Operations Section ==== -->
+    <section class="operations-section">
+        <!-- Top blue container -->
+        <div class="operations-header">
+            <h2>Streamlining Operations for Leading Service Providers</h2>
+            <div class="blue-box">
+                <h3>
+                    Managing operations just<br /><strong>got a whole lot easier.</strong>
+                </h3>
+                <p>
+                    Free your team from manual tasks to focus on strategic work boosting
+                    productivity, reducing stress, and improving overall service
+                    delivery.
+                </p>
+            </div>
+            <div class="image-wrapper" data-aos="fade-up">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/11/Operations-Hero.png"
+                    alt="Platform Screenshot" />
+            </div>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="features-container">
+            <div class="feature-card-one" data-aos="fade-up">
+                <i class="fas fa-cogs"></i>
+                <p>
+                    <strong>Seamless CMMS</strong><br />Integrate with client systems
+                    easily
+                </p>
+            </div>
+            <div class="feature-card-two" data-aos="fade-up" data-aos-delay="100">
+                <i class="fas fa-user-friends"></i>
+                <p>
+                    <strong>Assign Subcontractors</strong><br />Based on skill or trade
+                </p>
+            </div>
+            <div class="feature-card-three" data-aos="fade-up" data-aos-delay="200">
+                <i class="fas fa-bolt"></i>
+                <p>
+                    <strong>Quick Work Orders</strong><br />Generate and dispatch in
+                    seconds
+                </p>
+            </div>
+            <div class="feature-card-four" data-aos="fade-up" data-aos-delay="300">
+                <i class="fas fa-tasks"></i>
+                <p>
+                    <strong>One Place Control</strong><br />Track, verify, and manage
+                    work
+                </p>
+            </div>
+        </div>
+        <hr />
+    </section>
+    <!-- --------------- OPERATION SECTION END -------------- -->
+
+    <!-- ======================= TOOLS SECTION ======================= -->
+    <section class="tools-section">
+        <div class="tools-container">
+            <!-- Heading -->
+            <h2 class="tools-title">Powerful tools to operate your business.</h2>
+
+            <!-- Video Card -->
+            <div class="tools-video-wrapper">
+                <video src="../assets/video/Operations Overview - List View.mp4" height="100%" width="auto"
+                    controls></video>
+            </div>
+
+            <div class="accordion-container">
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Get one easy-to-use communication channel</span>
+                        <div class="arrow-wrapper">
+                            <i class="arrow">→</i>
+                        </div>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>Streamline everything into one simple web and mobile platform that enables a seamless
+                                flow of communication, from service request to delivery. This makes it easier to
+                                coordinate your team, track progress and resolve issues rapidly to avoid delays.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Generate and dispatch work orders automatically</span>
+                        <div class="arrow-wrapper">
+                            <i class="arrow">→</i>
+                        </div>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>Leverage powerful on demand and bulk work order generation leveraging the map module and
+                                automatically assign priority subcontractors to specific sites based on a trade.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Put scheduled services on autopilot</span>
+                        <div class="arrow-wrapper">
+                            <i class="arrow">→</i>
+                        </div>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>For recurring and preventative services, teams can easily define their scope of work, set
+                                frequencies, assign subcontractors and work orders will automatically generate per your
+                                contracted agreements.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>Monitor and verify services in real-time</span>
+                        <div class="arrow-wrapper">
+                            <i class="arrow">→</i>
+                        </div>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>Monitor your team's performance, and maintain quality standards in real-time using our
+                                state-of-the art mobile and web app. Providing subcontractors with an easy way to report
+                                services, including check in and out times, photos, custom forms, signatures and more
+                                all from their mobile devices.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">
+                        <span>
+                            Gain valuable insights on your operations</span>
+                        <div class="arrow-wrapper">
+                            <i class="arrow">→</i>
+                        </div>
+                    </button>
+                    <div class="accordion-body">
+                        <div class="accordion-content">
+                            <p>What gets measured, gets improved. Our centralized platform enables you to collect data
+                                and valuable insights that you can use in real-time to understand exactly what is
+                                happening in your business. Enabling clear and concise actions, faster.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Integration Section -->
+            <div class="integration-wrapper">
+                <h3>Seamlessly integrate with your existing systems.</h3>
+                <p class="integration-subtitle">UtilizeCore integrates with the platforms you already use
+                    centralizing
+                    tools for better organization and increased productivity.</p>
+                <div class="integration-image">
+                    <img src="https://www.utilizecore.com/wp-content/uploads/2024/05/SCOperationsGraphic-1.png"
+                        alt="Integration Diagram" />
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- --------------- TOOLS SECTION END -------------- -->
+
+    <!-- --------------- TIME MANAGEMENT SECTION START -------------- -->
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">See how others have used UtilizeCore to succeed</h1>
+
+            <div class="tabs">
+                <button class="tab active" onclick="switchCase(0)">RAEL Fire Protection</button>
+                <button class="tab" onclick="switchCase(1)">US Snow Pros</button>
+                <button class="tab" onclick="switchCase(2)">Power Cooling Inc.</button>
+                <button class="tab" onclick="switchCase(3)">East End Group</button>
+            </div>
+        </div>
+
+        <div class="content">
+            <h2 class="case-title" id="caseTitle">How RAEL National Fire Protection reduced operational costs and
+                streamlined their business using UtilizeCore.</h2>
+
+            <div class="cards-container">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon problem-icon">!</div>
+                        <h3 class="card-title">The Problem</h3>
+                    </div>
+                    <p class="card-content" id="problemContent">
+                        RAEL carries out fire inspection, maintenance and repairs across the United States. They found
+                        that managing subcontractors in the field using multiple communication channels was disjointed
+                        and led to delays. With thousands of sites all running 24/7, operating the business involved
+                        heavy administrative tasks that led to high operational costs.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="icon solution-icon">✓</div>
+                        <h3 class="card-title">The Solution</h3>
+                    </div>
+                    <p class="card-content" id="solutionContent">
+                        UtilizeCore was able to help RAEL by installing automated workflows to help them manage their
+                        operations. This involved a simple platform to coordinate, communicate and manage all of their
+                        projects in one place. We also implemented digital equipment tags that RAEL attached to
+                        sprinklers and fire extinguishers, helping them to easily track, monitor and backup everything
+                        in one secure platform.
+                    </p>
+                </div>
+            </div>
+
+            <div class="cta">
+                <span class="cta-text">See how we helped <span id="companyName">RAEL</span> succeed—</span>
+                <a href="#" class="cta-link">read the full case study</a>.
+            </div>
+        </div>
+    </div>
+
+    <!-- --------------- TIME MANAGEMENT SECTION END -------------- -->
+    <!-- UTILIZECORE FEATURES SECTION -->
+    <section class="uc-features">
+        <div class="uc-title">
+            <h2>Remarkable alone, even better together.</h2>
+            <p>
+                UtilizeCore includes five powerful products, each impactful on its own, but together they deliver a
+                transformative solution for your business.
+            </p>
+        </div>
+
+        <div class="uc-grid">
+            <!-- Feature Card -->
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fas fa-university"></i></div>
+                <h3>Accounts Receivable</h3>
+                <p>Automated workflows, reminders & insights for tracking incoming payments. Built for subcontracted
+                    service management.</p>
+                <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                <h3>Accounts Payable</h3>
+                <p>Streamline invoice management with automation, timely reminders, and deep insights for better
+                    efficiency.</p>
+                <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fas fa-user-check"></i></div>
+                <h3>Sourcing / Compliance</h3>
+                <p>Hire and onboard faster. Your talent acquisition partner to find the right contractors easily.</p>
+                <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <div class="uc-card">
+                <div class="uc-icon"><i class="fas fa-file-signature"></i></div>
+                <h3>Proposals</h3>
+                <p>Create proposals, manage communications, and win more deals with streamlined processes.</p>
+                <a href="#">Read more <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+    <!-- UTILIZECORE FEATURES SECTION END -->
+    <!-- =================== START COMPANIES SECTION================================ -->
+    <section class="affiliates-section">
+        <div class="logos-grid-new">
+            <h2 class="affiliates-title">Affiliates</h2>
+            <div class="logo-item">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/SIMA.webp" alt="">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/American-Fire-Sprinkler-Association.webp"
+                    alt="">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/RT.webp" alt="">
+            </div>
+
+            <div class="logo-item">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/RFMA.webp" alt="">
+            </div>
+            <div class="logo-item">
+                <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/NAFEM.webp" alt="">
+            </div>
+
+        </div>
+    </section>
+    <!-- =================== END COMPANIES SECTION================================ -->
+    <!-- =================== START FOOTER SECTION================================ -->
+    <footer class="bg-light text-dark border-top mt-2 pt-5">
+        <div class="container-footer">
+            <div class="row">
+                <!-- Left Section: Logo and Links -->
+                <div class="col-lg-9 mb-4">
+                    <div class="mb-4">
+                        <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/UtilizeCore-Logo-Blue.svg"
+                            alt="UtilizeCore Logo" style="height: 35px;">
+                    </div>
+                    <div class="row">
+                        <!-- Solutions -->
+                        <div class="col-6 col-md-4 mb-3">
+                            <h6 class="fw-bold">Solutions</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="#" class="text-decoration-none text-dark">Service Operations</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Compliance and Sourcing</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Proposals</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Accounts Payable</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Accounts Receivable</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Assets</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Integrations</a></li>
+                            </ul>
+                        </div>
+                        <!-- Who We Help -->
+                        <div class="col-6 col-md-4 mb-3">
+                            <h6 class="fw-bold">Who we help</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="#" class="text-decoration-none text-dark">C-Suite Leaders</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Operations Teams</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Compliance Teams</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Accounts Receivable</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Accounts Payable</a></li>
+                            </ul>
+                        </div>
+                        <!-- Resources -->
+                        <div class="col-12 col-md-4 mb-3">
+                            <h6 class="fw-bold">Resources</h6>
+                            <ul class="list-unstyled small">
+                                <li><a href="#" class="text-decoration-none text-dark">Pricing</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Case Studies</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">About Us</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Blog</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">Videos</a></li>
+                                <li><a href="#" class="text-decoration-none text-dark">FAQs</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: Apps and Character -->
+                <div class="col-lg-3 text-center mb-4">
+                    <div class="d-flex justify-content-center gap-2 mb-3 flex-wrap">
+                        <a href="https://play.google.com/store/apps/details?id=com.utilizecore"><img
+                                src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"
+                                class="img-fluid" style="max-width: 130px;"></a>
+                        <a href="https://apps.apple.com/us/app/utilizecore/id1480524348"><img
+                                src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg"
+                                class="img-fluid" style="max-width: 130px;"></a>
+                    </div>
+                    <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/otto-Footer.svg" class="img-fluid"
+                        alt="Mascot">
+                </div>
+            </div>
+
+            <!-- Divider -->
+            <hr />
+
+            <!-- Bottom Links + Social -->
+            <div
+                class="d-flex flex-column flex-md-row justify-content-between align-items-center pb-3 gap-2 text-center">
+                <div class="d-flex flex-wrap justify-content-center gap-3 small">
+                    <a href="#" class="text-decoration-none text-dark">Terms and Conditions</a>
+                    <a href="#" class="text-decoration-none text-dark">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none text-dark">License Agreement</a>
+                    <a href="#" class="text-decoration-none text-dark">SLA</a>
+                    <a href="#" class="text-decoration-none text-dark">GDPR Security</a>
+                </div>
+                <!-- Social Icons -->
+                <div class="d-flex gap-3">
+
+                    <a href="https://www.linkedin.com/company/utilizecore" class="text-dark">
+                        <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/LinkedIn-Circled.svg" alt="X"
+                            style="height: 25px;">
+                    </a>
+                    <a href="https://twitter.com/utilizecore" class="text-dark">
+                        <img src="https://www.utilizecore.com/wp-content/uploads/2024/04/X-formerly-Twitter.svg" alt="X"
+                            style="height: 20px;">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCSP-SkMuwgfGKYqUztDxWwg" class="text-dark">
+                        <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/YouTube.svg" alt="youtube"
+                            style="height: 25px;">
+                    </a>
+                    <a href="https://www.facebook.com/p/UtilizeCore-100063534670505" class="text-dark">
+                        <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/Facebook-Circled.svg"
+                            alt="fa-facebook" style="height: 25px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =================== END FOOTER SECTION================================ -->
+
+    <script>
+        // Add entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        // Observe logo cards for staggered animation
+        document.querySelectorAll(".logo-card").forEach((card, index) => {
+            card.style.opacity = "0";
+            card.style.transform = "translateY(30px)";
+            card.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(card);
+        });
+        AOS.init({
+            duration: 800,
+            once: true,
+        });
+        const observerNew = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) entry.target.classList.add("visible");
+            });
+        });
+
+        document.querySelectorAll(".animate-on-scroll").forEach((el) => observer.observe(el));
+        document.querySelectorAll('.accordion-header').forEach(header => {
+            header.addEventListener('click', () => {
+                const item = header.parentElement;
+                item.classList.toggle('open');
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.accordion-header').forEach(header => {
+                header.addEventListener('click', function () {
+                    const item = this.parentElement;
+                    const body = item.querySelector('.accordion-body');
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items
+                    document.querySelectorAll('.accordion-item').forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                            otherItem.querySelector('.accordion-body').classList.remove('active');
+                            otherItem.querySelector('.accordion-header').setAttribute('aria-expanded', 'false');
+                        }
+                    });
+
+                    // Toggle current item
+                    if (isActive) {
+                        item.classList.remove('active');
+                        body.classList.remove('active');
+                        this.setAttribute('aria-expanded', 'false');
+                    } else {
+                        item.classList.add('active');
+                        body.classList.add('active');
+                        this.setAttribute('aria-expanded', 'true');
+                    }
+                });
+
+                // Keyboard support
+                header.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        header.click();
+                    }
+                });
+            });
+        });
+        const caseData = [
+            {
+                company: "RAEL",
+                title: "How RAEL National Fire Protection reduced operational costs and streamlined their business using UtilizeCore.",
+                problem: "RAEL carries out fire inspection, maintenance and repairs across the United States. They found that managing subcontractors in the field using multiple communication channels was disjointed and led to delays. With thousands of sites all running 24/7, operating the business involved heavy administrative tasks that led to high operational costs.",
+                solution: "UtilizeCore was able to help RAEL by installing automated workflows to help them manage their operations. This involved a simple platform to coordinate, communicate and and manage all of their projects in one place. We also implemented digital equipment tags that RAEL attached to sprinklers and fire extinguishers, helping them to easily track, monitor and backup everything in one secure platform."
+            },
+            {
+                company: "US Snow Pros",
+                title: "How US Snow Pros were able to get ahead of the storms and scale their operation.",
+                problem: "Large random snow events made it hard for US Snow Pros to plan for increased demand for plows across the country. US Snow Pros sought a streamlined platform to enhance operational efficiency during snow events, aiming for proactive management rather than reactive responses.",
+                solution: "Leveraging UtilizeCore’s integration capabilities, US Snow Pros were able to monitor and track incoming snowfall using NOAA forecasting to stay ahead of the storms. US Snow Pros were also able to bulk dispatch work orders to their teams all over the country to provide updates on when and where the snowfall would be - they could then track and monitor the progress of each job using the field mobile app."
+            },
+            {
+                company: "Power Cooling Inc",
+                title: "How Power Cooling were able to reduce operational costs and increase profits.",
+                problem: "Power Cooling Inc. faced increased operating costs and inefficiencies from using outdated legacy systems for their HVAC services. This led to lost profits and a lack of transparency with clients.",
+                solution: "UtilizeCore transformed how Power Cooling operates by streamlining their billing, work order management, and subcontractor coordination. This was achieved using a unified platform that includes a dispatch board, invoicing tools, and QuickBooks integration. Additionally, a mobile app was launched to allow subcontractors to verify services in real-time."
+            },
+            {
+                company: "East End Group",
+                title: "How Eastend Group was able to manage 100X more sites and grow to over 20,000 sites nationally.",
+                problem: "East End Group faced numerous challenges that held them back from scaling. As the demand for their services grew, they found the increased pressure from manual processes and multiple systems to be overwhelming.",
+                solution: "Having one centralized hub for managing all of their operations enabled East End Group to reallocate resources to help grow the business. UtilizeCore enabled real-time monitoring of all of their services with automatic reminders and alerts - and provided automations that alleviated pressure and improved performance across the board."
+            }
+        ];
+
+        function switchCase(index) {
+            // Update active tab
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabs[index].classList.add('active');
+
+            // Add fade out effect
+            const content = document.querySelector('.content');
+            content.classList.add('fade-out');
+
+            // Update content after fade out
+            setTimeout(() => {
+                const selectedCase = caseData[index];
+                document.getElementById('caseTitle').textContent = selectedCase.title;
+                document.getElementById('problemContent').textContent = selectedCase.problem;
+                document.getElementById('solutionContent').textContent = selectedCase.solution;
+                document.getElementById('companyName').textContent = selectedCase.company;
+
+                // Remove fade out effect
+                content.classList.remove('fade-out');
+            }, 150);
+        }
+
+        // Add loading animation on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('fadeInUp');
+            });
+        });
+
+        // Add parallax effect on scroll
+        window.addEventListener('scroll', function () {
+            const scrolled = window.pageYOffset;
+            const parallax = document.querySelector('body::before');
+            const speed = scrolled * 0.5;
+        });
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', function () {
+            const animatedElements = document.querySelectorAll('.card, .header, .content');
+            animatedElements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="../index.js"></script>
+</body>
+
+</html>

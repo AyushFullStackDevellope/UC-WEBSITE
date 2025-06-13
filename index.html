@@ -19,8 +19,9 @@
     <header id="header">
         <nav>
             <div class="logo">
+                <a href="index.html">
                 <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/UtilizeCore-Logo-Blue.svg"
-                    alt="UtilizeCore" />
+                    alt="UtilizeCore" /></a>
             </div>
 
             <div class="mobile-menu-toggle" id="mobileToggle">
@@ -31,11 +32,30 @@
 
             <ul class="nav-links" id="navLinks">
                 <li><a href="#solutions">Solutions</a></li>
-                <li><a href="#help">Who we help</a></li>
+                <li class="dropdown">
+                    <a href="#help">Who we help</a>
+                    <div class="dropdown-content">
+                        <a href="#">C-Suite Leaders</a>
+                        <a href="#">Accounts Receivable</a>
+                        <a href="#">Accounts Payable</a>
+                        <a href="#">Operation Teams</a>
+                        <a href="#">Compliance Teams</a>
+                        <a href="#">Snow & Ice Management</a>
+                    </div>
+                </li>
+
                 <li><a href="#pricing">Pricing</a></li>
-                <li><a href="#resources">Resources</a></li>
+                <li class="dropdown">
+                    <a href="#resources">Resources</a>
+                    <div class="dropdown-content">
+                        <a href="#">Blog</a>
+                        <a href="#">About Us</a>
+                        <a href="#">Case Studies</a>
+                        <a href="#">Videos</a>
+                        <a href="#">FAQs</a>
+                    </div>
                 <li><a href="#contact" class="cta-button">Talk to us</a></li>
-                <li><a href="#login" class="login-btn">Login</a></li>
+                <li><a href="https://reactwork.utilizecore.com/login" class="login-btn">Login</a></li>
             </ul>
         </nav>
     </header>
@@ -44,12 +64,36 @@
     <div class="mobile-sidebar" id="mobileSidebar">
         <ul class="mobile-nav-links">
             <li><a href="#solutions">Solutions</a></li>
-            <li><a href="#help">Who we help</a></li>
+
+            <li>
+                <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(this)">Who we help</a>
+                <div class="mobile-dropdown-content">
+                    <a href="#">C-Suite Leaders</a>
+                    <a href="#">Accounts Receivable</a>
+                    <a href="#">Accounts Payable</a>
+                    <a href="#">Operation Teams</a>
+                    <a href="#">Compliance Teams</a>
+                    <a href="#">Snow & Ice Management</a>
+                </div>
+            </li>
+
             <li><a href="#pricing">Pricing</a></li>
-            <li><a href="#resources">Resources</a></li>
+
+            <li>
+                <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(this)">Resources</a>
+                <div class="mobile-dropdown-content">
+                    <a href="#">Blog</a>
+                    <a href="#">About Us</a>
+                    <a href="#">Case Studies</a>
+                    <a href="#">Videos</a>
+                    <a href="#">FAQs</a>
+                </div>
+            </li>
+
             <li><a href="#contact" class="mobile-cta-button">Talk to us</a></li>
             <li><a href="#login" class="mobile-login-btn">Login</a></li>
         </ul>
+
     </div>
 
     <!-- ===== OVERLAY ===== -->
@@ -121,7 +165,14 @@
                                         <span class="accordion-icon">✕</span>
                                         20 Minutes Per Work Order
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -139,7 +190,13 @@
                                         <span class="accordion-icon">✕</span>
                                         No Visibility Into Work Performed
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -155,7 +212,13 @@
                                         <span class="accordion-icon">✕</span>
                                         Disconnected Communication Methods
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -171,7 +234,13 @@
                                         <span class="accordion-icon">✕</span>
                                         30 Minutes Per Invoice
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -187,7 +256,13 @@
                                         <span class="accordion-icon">✕</span>
                                         Hours for Subcontractor Compliance & Onboarding
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -209,7 +284,13 @@
                                         <span class="accordion-icon">✓</span>
                                         1 Minute Per Work Order
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -225,7 +306,13 @@
                                         <span class="accordion-icon">✓</span>
                                         Real Time Site Visibility
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -241,7 +328,13 @@
                                         <span class="accordion-icon">✓</span>
                                         A Single Platform for All Communications
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -258,7 +351,13 @@
                                         <span class="accordion-icon">✓</span>
                                         3 Minutes Per Invoice
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -275,7 +374,13 @@
                                         <span class="accordion-icon">✓</span>
                                         Minutes for Subcontractor Compliance & Onboarding
                                     </div>
-                                    <span class="accordion-toggle">▼</span>
+                                    <span class="accordion-toggle" aria-hidden="true">
+                                        <svg class="accordion-arrow" width="16" height="16" viewBox="0 0 24 24"
+                                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
                                 </div>
                                 <div class="accordion-content">
                                     <div class="accordion-body">
@@ -290,7 +395,6 @@
             </div>
         </div>
     </section>
-    <!-- ============COMPARISION SECTION ENDS============ -->
     <!-- ============COMPARISION SECTION ENDS============ -->
 
     <!-- ===== SOLUTIONS SECTION ===== -->
@@ -314,7 +418,7 @@
                     <h4>Service Operations</h4>
                     <p>Streamline your field service operations with comprehensive work order management and real-time
                         tracking.</p>
-                    <a href="#" class="solution-link">Read more →</a>
+                    <a href="./pages/solutions/service-operations.html" class="solution-link">Read more →</a>
                 </div>
 
                 <div class="solution-card" data-aos="fade-up" data-aos-delay="200">
@@ -424,18 +528,41 @@
     </div>
     <!-- ===== TRUSTED LOGOS SECTION END ===== -->
 
+    <!-- Smart Service Technology Section -->
+    <section class="smart-service-tech py-5">
+        <div class="container">
+            <div
+                class="gradient-box d-flex flex-column flex-md-row align-items-center justify-content-between rounded-4 p-4 p-md-5">
+
+                <!-- Image -->
+                <div class="img-wrapper mb-4 mb-md-0">
+                    <img src="https://www.utilizecore.com/wp-content/uploads/2024/04/Laptop-CTA-Image-Universal-Except-Homepage.webp"
+                        alt="Smart Technology UI" class="img-fluid shadow" style="max-width: 600px;">
+                </div>
+
+                <!-- Text Content -->
+                <div class="text-white ms-md-4 text-center text-md-start">
+                    <h2 class="fw-bold mb-3">Empowering You with Smart Service Technology</h2>
+                    <p class="fs-5 mb-0">
+                        We help streamline your operations using proven tools – so you can work smarter,
+                        deliver faster, and grow stronger.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Smart Service Technology Section END -->
+
     <!-- Managing Service Providers Section -->
     <section class="managing-providers-section">
         <div class="managing-providers-container">
-            <!-- Section Header -->
             <div class="section-header">
                 <h2 class="section-title">Managing service providers?</h2>
                 <h3 class="section-subtitle">Leverage one platform, any industry.</h3>
             </div>
 
-            <!-- Main Content Grid -->
             <div class="content-grid">
-                <!-- Left Column - Problems -->
                 <div class="problems-column">
                     <div class="problem-item">
                         <div class="problem-icon">
@@ -445,9 +572,7 @@
                                     stroke="currentColor" stroke-width="2" />
                             </svg>
                         </div>
-                        <div class="problem-text">
-                            <h4 class="problem-title">High call Volume</h4>
-                        </div>
+                        <h4 class="problem-title">High call Volume</h4>
                     </div>
 
                     <div class="problem-item">
@@ -458,9 +583,7 @@
                                     stroke="currentColor" stroke-width="2" />
                             </svg>
                         </div>
-                        <div class="problem-text">
-                            <h4 class="problem-title">Zero visibility when clients call</h4>
-                        </div>
+                        <h4 class="problem-title">Zero visibility when clients call</h4>
                     </div>
 
                     <div class="problem-item">
@@ -471,9 +594,7 @@
                                     stroke="currentColor" stroke-width="2" />
                             </svg>
                         </div>
-                        <div class="problem-text">
-                            <h4 class="problem-title">Managing service providers out of spreadsheets</h4>
-                        </div>
+                        <h4 class="problem-title">Managing service providers out of spreadsheets</h4>
                     </div>
 
                     <div class="problem-item">
@@ -483,13 +604,10 @@
                                 <polyline points="12,6 12,12 16,14" stroke="currentColor" stroke-width="2" />
                             </svg>
                         </div>
-                        <div class="problem-text">
-                            <h4 class="problem-title">Long wait times</h4>
-                        </div>
+                        <h4 class="problem-title">Long wait times</h4>
                     </div>
                 </div>
 
-                <!-- Right Column - Industries -->
                 <div class="industries-column">
                     <div class="industries-grid">
                         <div class="industry-card">
@@ -528,7 +646,7 @@
                             <div class="industry-name">EV Chargers</div>
                         </div>
 
-                        <div class="industry-card center-card">
+                        <div class="industry-card">
                             <div class="industry-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path
@@ -572,7 +690,7 @@
                             <div class="industry-icon">
                                 <svg viewBox="0 0 24 24" fill="currentColor">
                                     <path
-                                        d="M12.945 1.379l-.652.763c-.454.531-.454 1.365 0 1.896l.652.763a2.83 2.83 0 001.945.824c.719.046 1.403.337 1.945.824l.652.763c.454.531.454 1.365 0 1.896l-.652.763c-.542.487-1.226.778-1.945.824a2.83 2.83 0 00-1.945.824l-.652.763c-.454.531-.454 1.365 0 1.896l.652.763a2.83 2.83 0 001.945.824c.719.046 1.403.337 1.945.824l.652.763c.454.531.454 1.365 0 1.896l-.652.763a2.83 2.83 0 00-1.945.824 2.83 2.83 0 00-1.945.824l-.652.763c-.454.531-1.221.531-1.675 0l-.652-.763a2.83 2.83 0 00-1.945-.824 2.83 2.83 0 00-1.945-.824l-.652-.763c-.454-.531-.454-1.365 0-1.896l.652-.763a2.83 2.83 0 001.945-.824c.719-.046 1.403-.337 1.945-.824l.652-.763c.454-.531.454-1.365 0-1.896l-.652-.763a2.83 2.83 0 00-1.945-.824 2.83 2.83 0 00-1.945-.824l-.652-.763c-.454-.531-.454-1.365 0-1.896l.652-.763a2.83 2.83 0 001.945-.824c.719-.046 1.403-.337 1.945-.824l.652-.763c.454-.531 1.221-.531 1.675 0z" />
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
                                 </svg>
                             </div>
                             <div class="industry-name">Fire & Life<br>Safety</div>
@@ -629,12 +747,13 @@
                     </div>
                 </div>
             </div>
+        </div>
     </section>
-    <!-- =================== END MANAGING SERVICES SCTION================================ -->
 
+    <!-- =================== END MANAGING SERVICES SCTION================================ -->
     <!-- =================== START COMPANIES SECTION================================ -->
     <section class="affiliates-section">
-        <div class="logos-grid">
+        <div class="logos-grid-new">
             <h2 class="affiliates-title">Affiliates</h2>
             <div class="logo-item">
                 <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/SIMA.webp" alt="">
@@ -661,7 +780,7 @@
     <!-- =================== END COMPANIES SECTION================================ -->
     <!-- =================== START FOOTER SECTION================================ -->
     <footer class="bg-light text-dark border-top mt-2 pt-5">
-        <div class="container">
+        <div class="container-footer">
             <div class="row">
                 <!-- Left Section: Logo and Links -->
                 <div class="col-lg-9 mb-4">

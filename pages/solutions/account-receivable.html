@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UtilizeCore - Streamline Your Field Operations</title>
+    <title>UtilizeCore - Account Receivable</title>
     <link rel="stylesheet" href="../../index.css" />
     <link rel="stylesheet" href="../../styles/compilance.css" />
 
@@ -21,13 +21,13 @@
 </head>
 
 <body>
-    <!-- ===== HEADER & NAVIGATION ===== -->
+     <!-- ===== HEADER & NAVIGATION ===== -->
     <header id="header">
         <nav>
             <div class="logo">
                 <a href="../../index.html">
-                    <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/UtilizeCore-Logo-Blue.svg"
-                        alt="UtilizeCore" /></a>
+                    <img src="https://www.utilizecore.com/wp-content/uploads/2024/03/UtilizeCore-Logo-Blue.svg" alt="UtilizeCore" />
+                </a>
             </div>
 
             <div class="mobile-menu-toggle" id="mobileToggle">
@@ -37,7 +37,6 @@
             </div>
 
             <ul class="nav-links" id="navLinks">
-                <!-- <li><a href="#solutions">Solutions</a></li> -->
                 <li class="dropdown">
                     <a href="#solution">Solutions</a>
                     <div class="dropdown-content">
@@ -45,13 +44,11 @@
                         <a href="./compilance.html">Compliance and Sourcing</a>
                         <a href="./account-payable.html">Accounts Payable</a>
                         <a href="./account-receivable.html">Accounts Receivable</a>
-                        <a href="#">Accounts Receivable</a>
-                        <a href="#">Integrations</a>
+                        <a href="./integrations.html">Integrations</a>
                         <a href="#">Proposals</a>
                         <a href="#">Assets</a>
                     </div>
                 </li>
-
 
                 <li class="dropdown">
                     <a href="#help">Who we help</a>
@@ -88,20 +85,21 @@
     <!-- ===== MOBILE SIDEBAR ===== -->
     <div class="mobile-sidebar" id="mobileSidebar">
         <ul class="mobile-nav-links">
-            <li class="dropdown">
-                <a href="#solution">Solutions</a>
-                <div class="dropdown-content">
-                    <a href="./service-operations.html">Service Operations</a>
-                    <a href="./compilance.html">Compliance and Sourcing</a>
-                    <a href="">Accounts Payable</a>
-                    <a href="./account-receivable.html">Accounts Receivable</a>
-                    <a href="#">Integrations</a>
+            <li>
+                <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="solutions">Solutions</a>
+                <div class="mobile-dropdown-content">
+                     <a href="./service-operations.html">Service Operations</a>
+                        <a href="./compilance.html">Compliance and Sourcing</a>
+                        <a href="./account-payable.html">Accounts Payable</a>
+                        <a href="./account-receivable.html">Accounts Receivable</a>
+                        <a href="./integrations.html">Integrations</a>
                     <a href="#">Proposals</a>
                     <a href="#">Assets</a>
                 </div>
             </li>
+
             <li>
-                <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(this)">Who we help</a>
+                <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="help">Who we help</a>
                 <div class="mobile-dropdown-content">
                     <a href="#">C-Suite Leaders</a>
                     <a href="#">Accounts Receivable</a>
@@ -115,7 +113,7 @@
             <li><a href="#pricing">Pricing</a></li>
 
             <li>
-                <a href="javascript:void(0);" class="dropdown-toggle" onclick="toggleDropdown(this)">Resources</a>
+                <a href="javascript:void(0);" class="dropdown-toggle" data-dropdown="resources">Resources</a>
                 <div class="mobile-dropdown-content">
                     <a href="#">Blog</a>
                     <a href="#">About Us</a>
@@ -126,13 +124,13 @@
             </li>
 
             <li><a href="#contact" class="mobile-cta-button">Talk to us</a></li>
-            <li><a href="#login" class="mobile-login-btn">Login</a></li>
+            <li><a href="https://reactwork.utilizecore.com/login" class="mobile-login-btn">Login</a></li>
         </ul>
-
     </div>
 
     <!-- ===== OVERLAY ===== -->
-    <div class="overlay" id="overlay"></div>
+      <div class="overlay" id="overlay"></div>
+
 
 
     <!-- ===== HEADER SECTION END===== -->
@@ -637,13 +635,13 @@
                         <div class="col-6 col-md-4 mb-3">
                             <h6 class="fw-bold">Solutions</h6>
                             <ul class="list-unstyled small">
-                                <li><a href="#" class="text-decoration-none text-dark">Service Operations</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Compliance and Sourcing</a></li>
+                                <li><a href="./service-operations.html" class="text-decoration-none text-dark">Service Operations</a></li>
+                                <li><a href="./compilance.html" class="text-decoration-none text-dark">Compliance and Sourcing</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Proposals</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Accounts Payable</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Accounts Receivable</a></li>
+                                <li><a href="./account-receivable.html" class="text-decoration-none text-dark">Accounts Receivable</a></li>
                                 <li><a href="#" class="text-decoration-none text-dark">Assets</a></li>
-                                <li><a href="#" class="text-decoration-none text-dark">Integrations</a></li>
+                                <li><a href="./integrations.html" class="text-decoration-none text-dark">Integrations</a></li>
                             </ul>
                         </div>
                         <!-- Who We Help -->
